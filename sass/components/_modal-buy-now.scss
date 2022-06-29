@@ -1,0 +1,104 @@
+.modal-buy-now {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  z-index: 1001;
+  width: 270px;
+  height: auto;
+  padding: 40px;
+
+  background-image: linear-gradient(
+    to bottom,
+    $primaryColor 57%,
+    $iconColor 57%
+  );
+
+  @include mobile {
+    width: 300px;
+  }
+
+  @include mobile-horizontal {
+    width: 450px;
+    height: auto;
+
+    background-image: linear-gradient(
+    to bottom,
+    $primaryColor 54%,
+    $iconColor 54%
+    );
+  }
+
+  @include desktop {
+    width: 528px;
+    height: auto;
+
+    background-image: linear-gradient(
+    to bottom,
+    $primaryColor 52%,
+    $iconColor 52%
+    );
+  }
+
+  opacity: 1;
+
+  background-color: $primaryColor;
+
+
+  box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+  border-radius: 24px;
+
+  transition: opacity $hooverDuration $hoverTimeFunction,
+  transform $hooverDuration $hoverTimeFunction;
+
+  .backdrop.is-hidden & {
+    transform: translate(-50%, -50%) scale(0.1);
+    opacity: 0;
+  }
+  
+  .modal-buy-now__text {
+    margin-bottom: 12px;
+
+    color: $accentColor;
+    
+    font-family: Titan One;
+    @include font(700, 19px, 1.5, 0.03em);
+    text-transform: uppercase;
+    text-align: center;
+
+    @include desktop {
+      @include font(700, 20px, 1.15, 0.03em);
+    }
+  }
+  
+  .modal-buy-now__box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 120px;
+  }
+
+  .modal-buy-now__icon {
+    fill: $accentColor;
+  }
+
+  .modal-buy-now__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.modal-buy-now__item {
+    &:not(:last-child) {
+        margin-bottom: 10px;
+    }
+
+    @include desktop {
+        &:not(:last-child) {
+            margin-bottom: 15px;
+        }
+    }
+  }
+}

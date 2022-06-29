@@ -1,0 +1,383 @@
+.hero {
+    position: relative;    
+    background-color: #FFB8CA;
+    overflow: hidden;
+
+    &__container {      
+      position: relative;
+      padding-top: 194px; 
+      padding-bottom: 156px; 
+      
+      @media screen and (min-width: 768px) {
+        padding-top: 102px;
+        padding-bottom: 0;
+        
+      }
+      
+      @media screen and (min-width: 1280px) {
+        padding-top: 150px;
+      }
+    }
+
+    &__circle {
+      position: absolute;
+      top: 83px;      
+      right: -62px;
+      height: 344px;
+      width: 346px;
+      border-radius: 50%;
+      background-color: #FFA5BA;
+      animation: zoom-in 1s;
+      
+
+      @media screen and (min-width: 768px) {
+        top: 43px;
+        right: 185px;
+        height: 333px;
+        width: 335px;
+      }
+
+      @media screen and (min-width: 1280px) {
+        top: 54px;
+        right: 229px;
+        height: 534px;
+        width: 534px;
+        
+      }
+    }
+
+    &__row {
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      z-index: 2;  
+      align-items: flex-end;           
+      
+    }
+
+    
+    &__title {
+      font-family: 'Titan One';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 26px;
+      line-height: 1.15;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: $primaryColor;
+      margin-bottom: 20px;
+
+      @media screen and (min-width: 768px) {
+        font-size: 22px;
+        line-height: 1.14;        
+      }
+
+      @media screen and (min-width: 1280px) {
+        font-size: 38px;
+        line-height: 1.16;
+        margin-bottom: 24px;
+      }
+    }
+
+    &__title--red {
+      font-size: 48px;
+      line-height: 0.96;
+      color: $accentColor;
+
+      @media screen and (min-width: 768px) {
+        font-size: 34px;
+        line-height: 0.92;
+      }
+
+      @media screen and (min-width: 1280px) {
+        font-size: 58px;
+        line-height: 0.9;
+      }
+    }
+
+    .hero-link__list {
+      display: flex;
+    }
+
+    .hero-link__item {
+      &:not(:last-child) {
+        margin-right: 8px;
+      }
+
+      @include desktop {
+        &:not(:last-child) {
+          margin-right:12px;
+        }
+      }
+    }
+
+    &__link {
+      @include font(null, 8px, 1.25, 0.01em);
+      width: 62px;
+      height: 24px;
+      border-radius: 20px;
+      background-color: $accentColor;
+      color: $primaryColor;
+      transition: background-color $hooverDuration $hoverTimeFunction;
+
+
+      @include desktop {
+        width: 107px;
+        height: 40px;
+        @include font(null, 14px, 1.29, 0.01em);
+      }
+
+      &:hover,
+      &:focus {
+        background-color: #C7133E;
+      }
+
+      &--light {
+        width: 83px;
+        height: 24px;
+        background-color: $primaryColor;
+        color: $accentColor;
+
+        transition: background-color $hooverDuration $hoverTimeFunction;
+
+        @include desktop {
+          width: 138px;
+          height: 40px;
+          @include font(null, 14px, 1.29, 0.01em);
+        }
+
+        &:hover,
+        &:focus {
+          background-color: $btnhoover;
+        }
+      }
+    }
+
+    &__item {      
+      position: relative;
+      font-family: 'Titan One';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 28px;
+      line-height: 1.14;      
+      letter-spacing: 0.04em;      
+      color: $accentColor;
+      text-align: right;  
+      padding-right: 10px;    
+
+      @media screen and (min-width: 1280px) {
+        font-size: 46px;
+        line-height: 1.15;
+        padding-right: 18px;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 28px;
+        right: 0;
+        height: 16px;
+        width: 16px;
+        border-radius: 50%;
+        background-color: $primaryColor;
+        z-index: -1;
+        
+        @media screen and (max-width: 767px) {
+          display: none;
+        }
+
+        @media screen and (min-width: 1280px) {
+          bottom: 47px;
+          right: 0;
+          height: 30px;
+          width: 30px;
+        }
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+      
+      @media screen and (max-width: 767px) {
+        display: none;
+      }
+    
+    }
+
+    &__item-text {      
+      font-family: 'DM Sans';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 8px;
+      line-height: 1.25;      
+      color: $primaryColor;
+      
+
+      @media screen and (max-width: 767px) {
+        display: none;
+      }
+
+      @media screen and (min-width: 1280px) {
+        font-size: 14px;
+        line-height: 1.29;        
+      }
+    }
+
+    &__milk {         
+      display: flex;
+      align-items: center;      
+      padding-top: 20px;
+      padding-bottom: 13px;
+
+      @media screen and (max-width: 767px) {
+        display: none;
+      }
+
+      @media screen and (min-width: 1280px) {
+        padding-top: 40px;
+        padding-bottom: 50px;
+      }
+    }
+
+    &__text {  
+      font-family: 'DM Sans';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 8px;
+      line-height: 1.5;
+      color: $primaryColor;                
+      
+      @media screen and (max-width: 767px) {
+        display: none;
+      }
+
+      @media screen and (min-width: 768px) {
+        animation: zoom-in 2s;
+      }
+      
+      @media screen and (min-width: 1280px) {
+        font-size: 14px;
+        line-height: 1.43;  
+        padding-top: 50px;      
+      }
+    }
+
+
+    &__img1 {       
+      
+      @media screen and (max-width: 767px) {
+        display: none;
+      }
+
+      @media screen and (min-width: 768px) {
+      animation-name: opacity;
+      animation-delay: 1.5s;
+      animation-duration: 1.5s;
+      animation-fill-mode: both;
+      }
+    }
+
+    &__img2 {
+      position: absolute;            
+      top: 9px;
+      right: 94px;
+      animation-name: opacity;
+      animation-delay: 1s;
+      animation-duration: 1s;
+      animation-fill-mode: both;
+
+      @media screen and (min-width: 768px) {
+        top: 37px;
+        right: 118px;
+      }
+
+      @media screen and (min-width: 1280px) {
+        top: 54px;
+        right: 179px;               
+      }
+    }
+
+    
+    &__img3 {            
+      @media screen and (max-width: 767px) {
+        display: none;
+      }
+
+      @media screen and (min-width: 768px) {
+      animation-name: opacity;
+      animation-delay: 2s;
+      animation-duration: 2s;
+      animation-fill-mode: both;
+      }
+    }
+
+    &__text-btn { 
+      display: flex;
+      justify-content: center;
+      align-items: center;        
+      height: 18px;
+      width: 18px;
+      border-radius: 50%;
+      background-color: $primaryColor;
+      margin-top: 7px;
+      cursor: pointer;
+      transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+      @media screen and (max-width: 767px) {
+        display: none;
+      }
+
+      @media screen and (min-width: 1280px) {
+        height: 26px;
+        width: 26px; 
+        margin-top: 20px;   
+      }
+
+      &:hover,
+      &:focus {
+        background-color: $accentColor;
+
+        & .hero__icon {
+          fill: $primaryColor;
+        }
+      }
+    }
+
+    &__icon {      
+      fill: $accentColor;      
+      transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+      
+      @media screen and (max-width: 767px) {
+        display: none;
+      }
+    }
+
+    &__wrap{
+      animation: zoom-in 2s;
+    }
+
+    &__numbers {
+
+      @media screen and (min-width: 768px) {
+        animation: zoom-in 2s;
+      }
+    }
+}
+
+@keyframes zoom-in {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

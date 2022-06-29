@@ -1,1 +1,1 @@
-# ice-cream
+Ice Cream

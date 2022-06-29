@@ -1,0 +1,117 @@
+.btn-close {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  stroke: $primaryColor;
+  width: 30px;
+  height: 30px;
+  left: 50%;
+  top: 20px;
+  transform: translateX(-50%) scale(1) rotate(0);
+  border-radius: 50%;
+  border: 1px solid transparent;
+  transition: background-color 250ms;
+
+  &:hover,
+  &:focus {
+    background-color: $primaryColor;
+    stroke: $accentColor;
+  }
+
+  &--first {
+    background-color: $modalBackground;
+  }
+
+  &--second {
+    background-color: rgb(230, 194, 143);
+  }
+
+  &--third {
+    background-color: #98bf65;
+  }
+}
+
+.modal-produkt {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1) rotate(0);
+
+  padding-top: 60px;
+  padding-bottom: 50px;
+  padding-right: 40px;
+  padding-left: 40px;
+  height: 400px;
+  width: 280px;
+  //   transition: fill $hooverDuration $hoverTimeFunction;
+
+  border-radius: 24px;
+  background-color: $iconColor;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+
+  @media screen and (min-width: 768px) {
+    width: 224px;
+    height: 450px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+  @media screen and (min-width: 1280px) {
+    width: 355px;
+    height: 500px;
+    padding-right: 40px;
+    padding-left: 40px;
+    padding-top: 100px;
+  }
+
+  &--first {
+    @media screen and (min-width: 768px) {
+      top: 50%;
+      left: calc(50% - 240px);
+      transform: translate(-50%, -50%);
+    }
+    @media screen and (min-width: 1280px) {
+      top: 50%;
+      left: calc(50% - 426px);
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &--second {
+    background-color: #f0d1a5;
+    text-align: center;
+  }
+
+  &--third {
+    background-color: #c2e297;
+    padding-top: 80px;
+    padding-bottom: 60px;
+    text-align: center;
+    @media screen and (min-width: 768px) {
+      left: calc(50% + 240px);
+      transform: translate(-50%, -50%);
+    }
+    @media screen and (min-width: 1280px) {
+      left: calc(50% + 426px);
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+.modal-produkt__title {
+  font-family: 'DM Sans';
+  text-align: center;
+  color: $primaryColor;
+  @include font(700, 16px, 1.52, null);
+
+  @media screen and (min-width: 768px) {
+    @include font(700, 18px, 1.52, null);
+  }
+
+  @media screen and (min-width: 1280px) {
+    @include font(700, 20px, 1.52, null);
+  }
+}

@@ -1,0 +1,26 @@
+@import './base/reset';
+@import './base/common';
+
+@import './utils/vars';
+@import './utils/mixins';
+@import './utils/no-scroll';
+@import './utils/visually-hidden';
+
+@import './components/button';
+@import './components/section';
+@import './components/container';
+@import './components/backdrop';
+@import './components/modal-buy-now';
+@import './components/modal-franchise';
+@import './components/modal-locations';
+@import './components/modal-products';
+
+@import './layouts/header';
+@import './layouts/hero.scss';
+@import './layouts/products.scss';
+@import './layouts/about.scss';
+@import './layouts/advantages.scss';
+@import './layouts/gallery.scss';
+@import './layouts/customer-review';
+@import './layouts/contacts.scss';
+@import './layouts/footer.scss';

@@ -1,0 +1,185 @@
+.modal-franchise {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  z-index: 1001;
+  width: 100%;
+  height: auto;
+  padding: 40px;
+
+  @include mobile-horizontal {
+    width: 450px;
+    height: auto;
+  }
+
+  @include desktop {
+    width: 528px;
+    height: auto;
+  }
+
+  opacity: 1;
+
+  background-color: $primaryColor;
+
+
+  box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+  border-radius: 24px;
+
+  transition: opacity $hooverDuration $hoverTimeFunction,
+  transform $hooverDuration $hoverTimeFunction;
+
+  .backdrop.is-hidden & {
+    transform: translate(-50%, -50%) scale(0.1);
+    opacity: 0;
+  }
+
+  .modal-franchise__button {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+  
+    background-color: $accentColor;
+  
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+
+    &:hover,
+    &:focus {
+    background-color: $primaryColor;
+  }
+
+    &:hover .modal-franchise__icon,
+    &:focus .modal-franchise__icon {
+    fill: $accentColor; 
+  }
+  }
+  
+  .modal-franchise__icon {
+    fill: $primaryColor;
+  
+    transition: fill $hooverDuration $hoverTimeFunction;
+  }
+  
+  .modal-franchise__text {
+    margin-bottom: 12px;
+
+    color: $accentColor;
+
+    font-family: Titan One;
+    @include font(700, 19px, 1.5, 0.03em);
+    text-transform: uppercase;
+    text-align: center;
+
+    @include desktop {
+      @include font(700, 20px, 1.15, 0.03em);
+    }
+  }
+  
+  .modal-franchise__submit {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.franchise-input__form {
+
+  .franchise-input__field {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 18px;
+  
+    &:nth-of-type(4) {
+      margin-bottom: 20px;
+    }
+    &:nth-of-type(5) {
+      margin-bottom: 30px;
+    }
+  }
+
+  .franchise-input__label {
+    color: $additionalDarkColor;
+    margin-bottom: 4px;
+  
+    @include font(null, 12px, 1.16, 0.01em);
+  }
+
+  .franchise-input__wrap {
+    position: relative;
+  }
+
+  .franchise-input__input {
+    width: 100%;
+    height: 40px;
+    padding-top: 11px;
+    padding-right: 15px;
+    padding-bottom: 11px;
+    padding-left: 15px;
+    
+    background-color: #FFA5BA;
+    color: $primaryColor;
+  
+    @include font(null, 14px, 1.14, 0.01em);
+  
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 24px;
+  
+    transition: color $hooverDuration $hoverTimeFunction, 
+    background-color $hooverDuration $hoverTimeFunction, 
+    border $hooverDuration $hoverTimeFunction;
+  
+    &:hover,
+    &:focus {
+      color: $additionalDarkColor;
+      background-color: $primaryColor;
+      border: 1px solid $accentColor;
+    }
+  }
+
+  .franchise-input__textarea {
+    width: 100%;
+    height: 120px;
+    padding: 12px 16px;
+  
+    background-color: #FFA5BA;
+    color: $primaryColor;
+  
+    @include font(null, 14px, 1.14, 0.01em);
+  
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 24px;
+  
+    transition: color $hooverDuration $hoverTimeFunction, 
+    background-color $hooverDuration $hoverTimeFunction, 
+    border $hooverDuration $hoverTimeFunction;
+  
+    &:hover,
+    &:focus {
+      color: $additionalDarkColor;
+      background-color: $primaryColor;
+      border: 1px solid $accentColor;
+  
+      &::placeholder,
+      &::placeholder {
+      @include font(null, 14px, 1.14, null);
+      color: $additionalDarkColor;
+      }
+    }
+  }
+  
+  .franchise-input__field textarea::placeholder {
+    color: $primaryColor;
+  
+    @include font(null, 12px, 1.16, 0.01em);
+  
+    transition: font-size $hooverDuration $hoverTimeFunction, 
+    line-height $hooverDuration $hoverTimeFunction,
+    color $hooverDuration $hoverTimeFunction;
+  }
+}

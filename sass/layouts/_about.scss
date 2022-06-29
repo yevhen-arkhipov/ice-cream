@@ -1,0 +1,144 @@
+.about {
+  background: #fff5f6;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-image: url(/images/about/about-bg-mob.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 0px 590px;
+
+  @include tablet {
+    background-image: none;
+    padding-top: 20px;
+  }
+  @include desktop {
+    background-image: url(/images/about/milk-right.png),
+      url(/images/about/milk-left.png);
+    background-repeat: no-repeat;
+    background-position: right 0px top 200px, left 0px top 200px;
+    background-size: auto 520px;
+    padding-top: 60px;
+    padding-bottom: 0px;
+  }
+}
+.about__top-text {
+  font-family: 'Titan One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.17;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffa5ba;
+  margin-bottom: 15px;
+  @include tablet {
+    font-size: 30px;
+  }
+}
+.about__title {
+  font-family: 'Titan One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 34px;
+  line-height: 39px;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #d41443;
+  margin-bottom: 32px;
+  @include tablet {
+    font-size: 48px;
+    margin-bottom: 40px;
+  }
+  @include desktop {
+    margin-bottom: 60px;
+    font-size: 58px;
+  }
+}
+.about__cards {
+  @include tablet {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.about__card {
+  @include tablet {
+    width: calc(100% / 2 - 16px);
+  }
+}
+.about__milk_pic {
+  display: block;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  @include desktop {
+    width: 500px;
+    margin: 0;
+  }
+}
+.about__list {
+  width: 220px;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  @include mobile-horizontal {
+    width: 100%;
+  }
+  @include tablet {
+    margin-top: 0px;
+  }
+  @include desktop {
+    margin-top: 90px;
+  }
+}
+.about__list_item {
+  &:not(:last-child) {
+    margin-bottom: 40px;
+  }
+  @include desktop {
+    width: 463px;
+  }
+}
+.about__first-text {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.62;
+  @include tablet {
+    font-size: 14px;
+    line-height: 1.94;
+  }
+  @include desktop {
+    width: 463px;
+    font-size: 16px;
+    line-height: 1.76;
+  }
+}
+.about__second-text {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.62;
+  color: #907e82;
+  @include tablet {
+    font-size: 14px;
+    line-height: 1.94;
+  }
+  @include desktop {
+    width: 463px;
+    font-size: 16px;
+    line-height: 1.76;
+  }
+}
+.about__button {
+  font-size: 14px;
+  margin-top: 20px;
+  @include tablet {
+    margin-top: 40px;
+    font-size: 16px;
+  }
+}
+#about__more {
+  display: none;
+}

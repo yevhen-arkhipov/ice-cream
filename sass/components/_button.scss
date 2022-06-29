@@ -1,0 +1,209 @@
+.button-light,
+.button-dark {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include font(700, 16px, 1.31, 0.02em);
+
+  border: transparent;
+  border-radius: 22px;
+}
+
+.button-light {
+  color: $accentColor;
+  background-color: $primaryColor;
+
+  transition: background-color $hooverDuration $hoverTimeFunction;
+
+  &:hover,
+  &:focus {
+    background-color: $btnhoover;
+  }
+}
+
+.button-dark {
+  color: $primaryColor;
+  background-color: $accentColor;
+
+  transition: background-color $hooverDuration $hoverTimeFunction;
+
+  &:hover,
+  &:focus {
+    background-color: #c7133e;
+  }
+}
+
+.contacts__button {
+  width: 161px;
+  height: 44px;
+
+  @include tablet {
+    width: 191px;
+    height: 44px;
+
+    &--inverse {
+      width: 174px;
+      height: 44px;
+    }
+  }
+  @include desktop {
+    width: 198px;
+    height: 44px;
+
+    &--inverse {
+      width: 180px;
+      height: 44px;
+    }
+  }
+
+  .button__icon {
+    margin-left: 8px;
+
+    @include tablet {
+      margin-left: 13.4px;
+    }
+    @include desktop {
+      margin-left: 13.62px;
+    }
+  }
+}
+
+.header__button {
+  display: none;
+
+  @include tablet {
+    display: flex;
+    width: 160px;
+    height: 44px;
+  }
+  @include desktop {
+    width: 159px;
+    height: 44px;
+  }
+
+  .button__icon {
+    @include tablet {
+      margin-left: 12.08px;
+    }
+    @include desktop {
+      margin-left: 12px;
+    }
+  }
+}
+
+.menu__button {
+  width: 209px;
+  height: 44px;
+
+  @include tablet {
+    width: 186px;
+    height: 44px;
+  }
+  @include desktop {
+    display: none;
+  }
+
+  .button__icon {
+    margin-left: 15.77px;
+
+    @include tablet {
+      margin-left: 14.04px;
+    }
+  }
+}
+
+.about__button {
+  width: 176px;
+  height: 44px;
+
+  .button__icon {
+    margin-left: 13.62px;
+  }
+}
+
+.modal-buy-now__button {
+  width: 201px;
+  height: 44px;
+
+  &--inverse {
+    border: 1px solid #ffb8ca;
+  }
+
+  @include tablet {
+    width: 230px;
+    height: 44px;
+
+    &--inverse {
+      width: 174px;
+      height: 44px;
+    }
+  }
+  @include desktop {
+    width: 228px;
+    height: 44px;
+
+    &--inverse {
+      width: 180px;
+      height: 44px;
+    }
+  }
+
+  .button__icon {
+    margin-left: 8px;
+
+    @include tablet {
+      margin-left: 13.4px;
+    }
+    @include desktop {
+      margin-left: 13.62px;
+    }
+  }
+}
+
+.modal-franchise__submit-button {
+  width: 180px;
+  height: 44px;
+
+  @include desktop {
+    width: 191px;
+    height: 44px;
+  }
+
+  .button__icon {
+    margin-left: 8px;
+
+    @include tablet {
+      margin-left: 13.4px;
+    }
+    @include desktop {
+      margin-left: 13.62px;
+    }
+  }
+}
+.button__scroll-up {
+  background: #ffdae4;
+  border: none;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  padding: 3px 5px 0px 5px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px;
+  position: fixed;
+  bottom: 25px;
+  right: 35px;
+  display: none;
+
+  transition: background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    background-color: #f62e5c;
+    & .header__scroll-up {
+      fill: $primaryColor;
+    }
+  }
+}
